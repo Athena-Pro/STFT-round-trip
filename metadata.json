@@ -1,0 +1,5 @@
+{
+  "name": "Interactive STFT Round Trip Test",
+  "description": "A web-based demonstration of a perfectly invertible Short-Time Fourier Transform (STFT) round trip. This application generates a test signal, simulates the STFT and its inverse, and visualizes the results to confirm losslessness, similar to the functionality of the provided Python script.",
+  "requestFramePermissions": []
+}
