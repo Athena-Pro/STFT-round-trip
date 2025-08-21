@@ -17,7 +17,7 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: 20, cache: 'npm' }
       - run: npm ci
-      - run: npm audit --audit-level=high
+      - run: npm run check
       - run: npm run build -- --base=/${{ github.event.repository.name }}/
       - run: cp dist/index.html dist/404.html
       - uses: actions/upload-pages-artifact@v3
