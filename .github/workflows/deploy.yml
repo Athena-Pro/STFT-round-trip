@@ -15,8 +15,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with: { node-version: 20, cache: 'npm' }
-      - run: npm ci
+        with: { node-version: 20, cache: 'npm', registry-url: 'https://registry.npmjs.org' }
+      - run: npm ci --no-audit --fund=false
       - run: npm run check
       - run: npm run build -- --base=/${{ github.event.repository.name }}/
       - run: cp dist/index.html dist/404.html
